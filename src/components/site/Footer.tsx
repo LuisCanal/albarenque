@@ -185,7 +185,21 @@ export function Footer() {
 
               <section>
                 <h3 className="text-xl font-bold text-brand-graphite">
-                  5. Google Maps y servicios externos
+                  5. Estadísticas de visitas (Google Analytics)
+                </h3>
+                <p className="mt-3">
+                  Utilizamos Google Analytics para comprender de forma agregada
+                  cómo se utiliza el sitio (por ejemplo, páginas visitadas,
+                  dispositivo o país aproximado). Google puede procesar datos
+                  técnicos de navegación según su propia política de privacidad.
+                  Podés limitar el seguimiento con extensiones del navegador o
+                  la configuración de anuncios de Google.
+                </p>
+              </section>
+
+              <section>
+                <h3 className="text-xl font-bold text-brand-graphite">
+                  6. Google Maps y otros servicios externos
                 </h3>
                 <p className="mt-3">
                   Nuestro sitio puede incluir mapas, enlaces o contenidos de
@@ -197,7 +211,7 @@ export function Footer() {
 
               <section>
                 <h3 className="text-xl font-bold text-brand-graphite">
-                  6. Conservación de la información
+                  7. Conservación de la información
                 </h3>
                 <p className="mt-3">
                   Conservamos la información únicamente durante el tiempo
@@ -209,7 +223,7 @@ export function Footer() {
 
               <section>
                 <h3 className="text-xl font-bold text-brand-graphite">
-                  7. Derechos de las personas titulares de datos
+                  8. Derechos de las personas titulares de datos
                 </h3>
                 <p className="mt-3">
                   Podés solicitar acceso, rectificación, actualización o supresión
@@ -221,7 +235,7 @@ export function Footer() {
 
               <section>
                 <h3 className="text-xl font-bold text-brand-graphite">
-                  8. Contacto
+                  9. Contacto
                 </h3>
                 <p className="mt-3">
                   Para consultas sobre esta política o para ejercer tus derechos
@@ -238,7 +252,7 @@ export function Footer() {
 
               <section>
                 <h3 className="text-xl font-bold text-brand-graphite">
-                  9. Actualizaciones
+                  10. Actualizaciones
                 </h3>
                 <p className="mt-3">
                   Esta política puede actualizarse en el futuro para reflejar

@@ -1,5 +1,6 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import appCss from "../styles.css?url";
 import {
   SITE_DESCRIPTION,
@@ -54,6 +55,7 @@ const sharedLinks = [
   { rel: "stylesheet", href: appCss },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" as const },
+  { rel: "preconnect", href: "https://www.googletagmanager.com" },
   {
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap",
@@ -124,6 +126,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
     <html lang="es-AR">
       <head>
         <HeadContent />
+        <GoogleAnalytics />
         <script
           type="application/ld+json"
           suppressHydrationWarning

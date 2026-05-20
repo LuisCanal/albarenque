@@ -18,3 +18,6 @@ export const SITE_TITLE =
 
 export const SITE_EMAIL = "info@albarenque.com.ar";
 export const SITE_PHONE = "+543454025690";
+
+/** Google Analytics 4 */
+export const GA_MEASUREMENT_ID = "G-YS3MF2VS3Q";
