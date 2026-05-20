@@ -199,13 +199,13 @@ export function Footer() {
 
               <section>
                 <h3 className="text-xl font-bold text-brand-graphite">
-                  6. Google Maps y otros servicios externos
+                  6. Mapa y servicios externos
                 </h3>
                 <p className="mt-3">
-                  Nuestro sitio puede incluir mapas, enlaces o contenidos de
-                  terceros para facilitar la ubicación del local o la comunicación
-                  con la empresa. Estos servicios pueden recopilar información
-                  técnica de navegación de acuerdo con sus propias políticas.
+                  El mapa de ubicación se muestra mediante OpenStreetMap (sin
+                  cuenta ni API key). Si abrís enlaces a Google Maps, WhatsApp
+                  u otras plataformas, el uso de esos servicios se rige por sus
+                  propias políticas de privacidad.
                 </p>
               </section>
 

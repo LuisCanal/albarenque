@@ -1,11 +1,18 @@
-import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, ExternalLink } from "lucide-react";
 
 const WHATSAPP =
   "https://wa.me/543454025690?text=" +
   encodeURIComponent("Hola, quiero consultar por un presupuesto.");
 
-const MAP_URL =
-  "https://www.google.com/maps?q=Bolivia%20526%2C%20Concordia%2C%20Entre%20R%C3%ADos%203200%2C%20Argentina&output=embed";
+/** Bolivia 526, Concordia — OpenStreetMap embed (gratis, sin API key). */
+const MAP_EMBED_URL =
+  "https://www.openstreetmap.org/export/embed.html?bbox=-58.0385%2C-31.4015%2C-58.0265%2C-31.3935&layer=mapnik&marker=-31.3975%2C-58.0325";
+
+const MAP_EXTERNAL_URL =
+  "https://www.openstreetmap.org/?mlat=-31.3975&mlon=-58.0325#map=17/-31.3975/-58.0325";
+
+const GOOGLE_MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=Bolivia+526,+Concordia,+Entre+R%C3%ADos,+Argentina";
 
 export function Contact() {
   return (
@@ -80,8 +87,8 @@ export function Contact() {
                 <svg
                   viewBox="0 0 24 24"
                   className="h-7 w-7"
-                 fill="currentColor"
-                 aria-hidden="true"
+                  fill="currentColor"
+                  aria-hidden="true"
                 >
                   <path d="M19.05 4.91A9.82 9.82 0 0 0 12.03 2C6.56 2 2.1 6.46 2.1 11.93c0 1.75.46 3.46 1.32 4.97L2 22l5.25-1.38a9.9 9.9 0 0 0 4.78 1.22h.01c5.47 0 9.93-4.46 9.93-9.93 0-2.65-1.03-5.14-2.92-7Zm-7.02 15.26h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.27-4.38c0-4.53 3.69-8.22 8.23-8.22 2.19 0 4.25.85 5.8 2.41a8.15 8.15 0 0 1 2.42 5.81c0 4.54-3.69 8.24-8.2 8.24Zm4.51-6.16c-.25-.13-1.47-.72-1.69-.8-.23-.08-.39-.12-.56.13-.16.25-.64.8-.78.96-.14.17-.28.19-.53.07-.25-.13-1.04-.38-1.98-1.22-.73-.65-1.22-1.46-1.37-1.7-.14-.25-.02-.38.11-.51.11-.11.25-.28.37-.42.12-.14.16-.24.25-.4.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.43.06-.65.31-.22.25-.85.83-.85 2.01 0 1.18.87 2.32.99 2.49.12.17 1.7 2.59 4.11 3.63.57.25 1.02.4 1.37.51.58.18 1.1.16 1.52.1.46-.07 1.47-.6 1.67-1.18.2-.57.2-1.06.14-1.17-.06-.11-.22-.17-.47-.29Z" />
                 </svg>
@@ -109,18 +116,40 @@ export function Contact() {
           </div>
         </div>
 
-        <div className="bg-brand-soft p-3 rounded-lg border border-border h-[320px] sm:h-[420px] lg:h-[460px]">
-          <iframe
-            title="Ubicación Albarenque"
-            src={MAP_URL}
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="rounded-md"
-          />
+        <div className="flex flex-col gap-3">
+          <div className="bg-brand-soft p-3 rounded-lg border border-border h-[320px] sm:h-[420px] lg:h-[460px] flex-1 min-h-0">
+            <iframe
+              title="Ubicación Albarenque en Concordia"
+              src={MAP_EMBED_URL}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-md"
+            />
+          </div>
+
+          <div className="flex flex-wrap gap-4 text-sm">
+            <a
+              href={MAP_EXTERNAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-medium text-brand-gold-strong hover:text-brand-gold transition-colors"
+            >
+              Ver mapa ampliado
+              <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+            </a>
+            <a
+              href={GOOGLE_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-medium text-brand-text-soft hover:text-brand-graphite transition-colors"
+            >
+              Abrir en Google Maps
+              <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
