@@ -202,10 +202,9 @@ export function Footer() {
                   6. Mapa y servicios externos
                 </h3>
                 <p className="mt-3">
-                  El mapa de ubicación se muestra mediante OpenStreetMap (sin
-                  cuenta ni API key). Si abrís enlaces a Google Maps, WhatsApp
-                  u otras plataformas, el uso de esos servicios se rige por sus
-                  propias políticas de privacidad.
+                  El mapa de ubicación se muestra mediante Google Maps embebido.
+                  Si abrís enlaces a WhatsApp u otras plataformas, el uso de esos
+                  servicios se rige por sus propias políticas de privacidad.
                 </p>
               </section>
 

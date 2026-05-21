@@ -1,18 +1,11 @@
-import { Phone, Mail, MapPin, MessageCircle, ExternalLink } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const WHATSAPP =
   "https://wa.me/543454025690?text=" +
   encodeURIComponent("Hola, quiero consultar por un presupuesto.");
 
-/** Bolivia 526, Concordia — OpenStreetMap embed (gratis, sin API key). */
 const MAP_EMBED_URL =
-  "https://www.openstreetmap.org/export/embed.html?bbox=-58.0385%2C-31.4015%2C-58.0265%2C-31.3935&layer=mapnik&marker=-31.3975%2C-58.0325";
-
-const MAP_EXTERNAL_URL =
-  "https://www.openstreetmap.org/?mlat=-31.3975&mlon=-58.0325#map=17/-31.3975/-58.0325";
-
-const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Bolivia+526,+Concordia,+Entre+R%C3%ADos,+Argentina";
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.5440615083403!2d-58.01124562410858!3d-31.400619174269025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ade7ff0aa6f353%3A0x2e3629991e290cbe!2sBolivia%20526%2C%20E3202%20Concordia%2C%20Entre%20R%C3%ADos!5e1!3m2!1ses-419!2sar!4v1779377512213!5m2!1ses-419!2sar";
 
 export function Contact() {
   return (
@@ -116,40 +109,18 @@ export function Contact() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3">
-          <div className="bg-brand-soft p-3 rounded-lg border border-border h-[320px] sm:h-[420px] lg:h-[460px] flex-1 min-h-0">
-            <iframe
-              title="Ubicación Albarenque en Concordia"
-              src={MAP_EMBED_URL}
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="rounded-md"
-            />
-          </div>
-
-          <div className="flex flex-wrap gap-4 text-sm">
-            <a
-              href={MAP_EXTERNAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 font-medium text-brand-gold-strong hover:text-brand-gold transition-colors"
-            >
-              Ver mapa ampliado
-              <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
-            </a>
-            <a
-              href={GOOGLE_MAPS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 font-medium text-brand-text-soft hover:text-brand-graphite transition-colors"
-            >
-              Abrir en Google Maps
-              <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
-            </a>
-          </div>
+        <div className="bg-brand-soft p-3 rounded-lg border border-border h-[320px] sm:h-[420px] lg:h-[460px]">
+          <iframe
+            title="Ubicación Albarenque — Bolivia 526, Concordia"
+            src={MAP_EMBED_URL}
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="rounded-md"
+          />
         </div>
       </div>
     </section>
