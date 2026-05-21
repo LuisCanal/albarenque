@@ -12,17 +12,38 @@ function AnimatedText({
   speed?: number;
   className?: string;
 }) {
+  let characterIndex = 0;
+
   return (
-    <span className={className} aria-hidden="true">
-      {Array.from(text).map((letter, index) => (
-        <span
-          key={`${letter}-${index}`}
-          className="hero-letter-reveal"
-          style={{ animationDelay: `${delay + index * speed}s` }}
-        >
-          {letter === " " ? "\u00A0" : letter}
-        </span>
-      ))}
+    <span className={`${className} whitespace-normal break-normal`} aria-hidden="true">
+      {text.split(/(\s+)/).map((token, tokenIndex) => {
+        if (/^\s+$/.test(token)) {
+          characterIndex += token.length;
+          return " ";
+        }
+
+        return (
+          <span
+            key={`${token}-${tokenIndex}`}
+            className="inline-block whitespace-nowrap"
+          >
+            {Array.from(token).map((letter) => {
+              const index = characterIndex;
+              characterIndex += 1;
+
+              return (
+                <span
+                  key={`${letter}-${index}`}
+                  className="hero-letter-reveal"
+                  style={{ animationDelay: `${delay + index * speed}s` }}
+                >
+                  {letter}
+                </span>
+              );
+            })}
+          </span>
+        );
+      })}
     </span>
   );
 }
@@ -105,7 +126,7 @@ export function Hero() {
 
           <h1
             id="hero-title"
-            className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05]"
+            className="font-display max-w-[20rem] text-[2.4rem] font-bold leading-[1.1] break-normal text-balance sm:max-w-2xl sm:text-5xl sm:leading-[1.05] lg:text-6xl"
             aria-label="Fábrica de mosaicos, mármoles y amoblamientos"
           >
             <AnimatedText
