@@ -2,12 +2,17 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 
 import appCss from "../styles.css?url";
 
+const siteUrl = "https://mosaicosalbarenque.com.ar/";
+const logoUrl = `${siteUrl}albarenque-logo-new.png`;
+
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Albarenque",
   legalName: "MOSAL SRL",
-  url: "https://mosaicosalbarenque.com.ar/",
+  url: siteUrl,
+  logo: logoUrl,
+  image: logoUrl,
   foundingDate: "1956",
   description:
     "Fábrica de mosaicos, mármoles y amoblamientos con soluciones para obras y espacios exigentes.",
@@ -69,8 +74,12 @@ export const Route = createRootRoute({
           "Fábrica de mosaicos, mármoles y amoblamientos con soluciones para obras y espacios exigentes.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: siteUrl },
+      { property: "og:image", content: logoUrl },
+      { property: "og:image:alt", content: "Albarenque" },
       { property: "og:locale", content: "es_AR" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: logoUrl },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -80,7 +89,10 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap",
       },
-      { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "icon", href: "/favicon.ico", sizes: "any" },
+      { rel: "icon", href: "/favicon.png", type: "image/png", sizes: "32x32" },
+      { rel: "apple-touch-icon", href: "/favicon.png" },
+      { rel: "manifest", href: "/site.webmanifest" },
     ],
   }),
   shellComponent: RootShell,

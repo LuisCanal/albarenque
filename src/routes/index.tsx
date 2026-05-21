@@ -9,6 +9,9 @@ import { Clients } from "@/components/site/Clients";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 
+const siteUrl = "https://mosaicosalbarenque.com.ar/";
+const logoUrl = `${siteUrl}albarenque-logo-new.png`;
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -25,14 +28,18 @@ export const Route = createFileRoute("/")({
         content: "Más de 60 años fabricando soluciones durables para obras y espacios exigentes.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://mosaicosalbarenque.com.ar/" },
+      { property: "og:url", content: siteUrl },
+      { property: "og:image", content: logoUrl },
+      { property: "og:image:alt", content: "Albarenque" },
       { property: "og:site_name", content: "Albarenque" },
       { property: "og:locale", content: "es_AR" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: logoUrl },
     ],
     links: [
-      { rel: "canonical", href: "https://mosaicosalbarenque.com.ar/" },
-      { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "canonical", href: siteUrl },
+      { rel: "icon", href: "/favicon.ico", sizes: "any" },
+      { rel: "icon", href: "/favicon.png", type: "image/png", sizes: "32x32" },
     ],
   }),
   component: Index,
