@@ -5,6 +5,7 @@ export const SITE_NAME = "Albarenque";
 export const SITE_LEGAL_NAME = "MOSAL SRL";
 
 export const SITE_OG_IMAGE = `${SITE_URL}/og-image.png`;
+export const SITE_LOGO_URL = `${SITE_URL}/albarenque-logo-new.png`;
 export const SITE_FAVICON = `${SITE_URL}/favicon.png`;
 
 export const SITE_DESCRIPTION =

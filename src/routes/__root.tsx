@@ -7,6 +7,7 @@ import {
   SITE_EMAIL,
   SITE_FAVICON,
   SITE_LEGAL_NAME,
+  SITE_LOGO_URL,
   SITE_NAME,
   SITE_OG_DESCRIPTION,
   SITE_OG_IMAGE,
@@ -23,7 +24,7 @@ const structuredData = {
   legalName: SITE_LEGAL_NAME,
   url: SITE_URL,
   image: SITE_OG_IMAGE,
-  logo: SITE_FAVICON,
+  logo: SITE_LOGO_URL,
   foundingDate: "1956",
   description: SITE_OG_DESCRIPTION,
   telephone: SITE_PHONE,
@@ -60,8 +61,10 @@ const sharedLinks = [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap",
   },
-  { rel: "icon", href: "/favicon.png", type: "image/png" },
+  { rel: "icon", href: "/favicon.ico", sizes: "any" },
+  { rel: "icon", href: "/favicon.png", type: "image/png", sizes: "32x32" },
   { rel: "apple-touch-icon", href: "/favicon.png" },
+  { rel: "manifest", href: "/site.webmanifest" },
 ];
 
 const sharedSocialMeta = [

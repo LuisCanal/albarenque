@@ -175,9 +175,9 @@ export function Works() {
       aria-labelledby="obras-title"
       className="py-24 lg:py-32 bg-white border-t border-border"
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         <div className="lg:col-span-4">
-          <p className="tracking-[0.25em] uppercase text-brand-gold-strong font-semibold mb-4 text-2xl">
+          <p className="tracking-[0.20em] uppercase text-brand-gold-strong font-semibold mb-4 text-2xl">
             Nuestros proyectos
           </p>
 

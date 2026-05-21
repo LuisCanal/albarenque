@@ -431,7 +431,7 @@ export function News() {
         {/* ── HEADER ── */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
           <div className="max-w-2xl">
-            <p className="tracking-[0.25em] uppercase text-brand-gold-strong font-semibold mb-4 text-sm">
+            <p className="tracking-[0.25em] uppercase text-brand-gold-strong font-semibold mb-4 text-xl">
               Novedades
             </p>
             <h2
