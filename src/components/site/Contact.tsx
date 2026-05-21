@@ -5,7 +5,7 @@ const WHATSAPP =
   encodeURIComponent("Hola, quiero consultar por un presupuesto.");
 
 const MAP_EMBED_URL =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.5440615083403!2d-58.01124562410858!3d-31.400619174269025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ade7ff0aa6f353%3A0x2e3629991e290cbe!2sBolivia%20526%2C%20E3202%20Concordia%2C%20Entre%20R%C3%ADos!5e1!3m2!1ses-419!2sar!4v1779377512213!5m2!1ses-419!2sar";
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.5440615083403!2d-58.01124562410858!3d-31.400619174269025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ade7ff0aa6f353%3A0x2e3629991e290cbe!2sBolivia%20526%2C%20E3202%20Concordia%2C%20Entre%20R%C3%ADos!5e0!3m2!1ses-419!2sar!4v1779377512213!5m2!1ses-419!2sar";
 
 export function Contact() {
   return (
